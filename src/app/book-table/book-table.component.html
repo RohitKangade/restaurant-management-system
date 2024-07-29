@@ -1,0 +1,92 @@
+<form
+  [formGroup]="tableForm"
+  (ngSubmit)="handleSubmit()"
+  class="form-container"
+>
+  <h1 class="text-center mb-4">Book Table</h1>
+
+  <div class="form-group">
+    <label for="fname">First Name*:</label>
+    <input
+      type="text"
+      formControlName="firstName"
+      id="fname"
+      class="form-control"
+    />
+    <div *ngIf="firstName.errors?.required" class="text-danger mt-2">
+      <b>First Name is required</b>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="lname">Last Name*:</label>
+    <input
+      type="text"
+      formControlName="lastName"
+      id="lname"
+      class="form-control"
+    />
+    <div *ngIf="forlastName.errors?.required" class="text-danger mt-2">
+      <b>Last Name is required</b>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="mobno">Mobile Number*:</label>
+    <input
+      type="text"
+      formControlName="mobno"
+      id="mobno"
+      class="form-control"
+    />
+    <div *ngIf="forMob.errors?.pattern" class="text-danger mt-2">
+      <b>Mobile Number must be numeric and 10 digits long</b>
+    </div>
+    <div *ngIf="forMob.errors?.maxlength" class="text-danger mt-2">
+      <b>Mobile Number cannot exceed 10 digits</b>
+    </div>
+    <div *ngIf="forMob.errors?.required" class="text-danger mt-2">
+      <b>Mobile Number is required</b>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email*:</label>
+    <input
+      type="email"
+      formControlName="email"
+      id="email"
+      class="form-control"
+    />
+    <div *ngIf="forEmail.errors?.email" class="text-danger mt-2">
+      <b>Invalid email address</b>
+    </div>
+    <div *ngIf="forEmail.errors?.required" class="text-danger mt-2">
+      <b>Email is required</b>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="NumberOfPersons">Number Of Persons*:</label>
+    <input
+      type="number"
+      formControlName="NumberOfPersons"
+      id="NumberOfPersons"
+      class="form-control"
+    />
+    <div *ngIf="forNumberOfperson.errors?.required" class="text-danger mt-2">
+      <b>Number Of Persons is required</b>
+    </div>
+    <div *ngIf="forNumberOfperson.errors?.Min" class="text-danger mt-2">
+      <b>At least 1 Person is requred</b>
+    </div>
+    <div *ngIf="forNumberOfperson.errors?.Max" class="text-danger mt-2">
+      <b>max 50 Person only</b>
+    </div>
+  </div>
+
+  <div class="form-group text-center">
+    <button type="submit" class="btn btn-primary mr-2">Register</button>
+    <button type="reset" class="btn btn-secondary">Reset</button>
+  </div>
+</form>

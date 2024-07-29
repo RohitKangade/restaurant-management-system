@@ -1,0 +1,49 @@
+@if (images) {
+	<ngb-carousel>
+		<ng-template ngbSlide>
+			<div class="picsum-img-wrapper">
+				<img [src]="images[0]" alt="Random first slide" />
+			</div>
+			<div class="carousel-caption">
+				<h3>Indian Thali</h3>
+				<p>Thali Special</p>
+			</div>
+		</ng-template>
+		<ng-template ngbSlide>
+			<div class="picsum-img-wrapper">
+				<img [src]="images[1]" alt="Random first slide" />
+			</div>
+			<div class="carousel-caption">
+				<h3>Culinary Special</h3>
+				<p>Speciality Food</p>
+			</div>
+		</ng-template>
+		<ng-template ngbSlide>
+			<div class="picsum-img-wrapper">
+				<img [src]="images[2]" alt="Random first slide" />
+			</div>
+			<div class="carousel-caption">
+				<h3>South Indian</h3>
+				<p>South Food with Extra Gee</p>
+			</div>
+		</ng-template>
+		<ng-template ngbSlide>
+			<div class="picsum-img-wrapper">
+				<img [src]="images[3]" alt="Random second slide" />
+			</div>
+			<div class="carousel-caption">
+				<h3>SuShi, Noodles</h3>
+				<p>Chinese Food Item</p>
+			</div>
+		</ng-template>
+		<ng-template ngbSlide>
+			<div class="picsum-img-wrapper">
+				<img [src]="images[4]" alt="Random third slide" />
+			</div>
+			<div class="carousel-caption">
+				<h3>Italian Dishes</h3>
+				<p>Pizza</p>
+			</div>
+		</ng-template>
+	</ngb-carousel>
+}

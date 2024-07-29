@@ -1,0 +1,22 @@
+.container{ 
+    height: 100%;
+    margin-bottom: 20%;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+  }
+  
+  .quantity-controls .btn {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+  }
+  
+  .quantity-controls .quantity {
+    width: 40px;
+    text-align: center;
+    line-height: 40px;
+  }
+  

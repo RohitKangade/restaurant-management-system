@@ -1,0 +1,385 @@
+/* marquee line  */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+}
+
+
+.head {
+    text-align: center;
+    font-family: cursive;
+    word-spacing: 5px;
+    
+}
+
+.head1 {
+    text-align: center;
+    font-family: cursive;
+    word-spacing: 5px;
+    margin-top: -70px;
+
+    
+}
+/* footer */
+footer {
+    color: #fff;
+}
+ul {
+    padding: 0px;
+}
+ol, ul {
+    margin-bottom: 0px;
+}
+
+.social-icon {
+    padding: 0;
+    margin-bottom: 0px;
+        float: right;
+}
+
+.big{
+    display: flex;
+}
+
+.big1 img{
+width: 300px;
+margin-left: 200px;
+}
+
+.star span{
+    height: 10px;
+}
+
+.big2 {
+    margin-left: 400px;
+    margin-right: 200px;
+}
+
+.social-icon li {
+    list-style: none;
+    display: inline-block;
+}
+.social-icon li i {
+    font-size: 14px;
+    color: #cad8d8;
+    border: solid 2px #ffffff;
+    height: 31px;
+    width: 31px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 100px;
+    line-height: 27px;
+    margin-right: 15px;
+    transition: 1s;
+    background: #16132c;
+}
+.social-icon li i:hover {
+    border: solid 2px #aec09c;
+    color: #ffffff;
+    background: #c0f58c;
+}
+
+
+
+.col-lg-4 h4{
+    color: white;
+}
+
+.col-md-4 h4{
+    color: white;
+}
+
+.phone-no i {
+    position: relative;
+    margin-right: 14px;
+    font-size: 43px;
+    top: 5px;
+}
+.phone-no {
+    margin-top: -22px;
+    text-align: right;
+}
+.footer-day-time {
+    padding-bottom: 30px;
+    border-bottom: 2px solid #7a6f6f;
+    padding-top: 14px;
+    margin-bottom: 55px;
+}
+.footer-day-time ul li {
+    display: inline;
+    margin-right: 20px;
+}
+.footer-day-time ul li:last-child {
+    margin-right: 0px;
+}
+.phone-no a {
+    color: #fff;
+    font-family: PlayfairDisplay-Black;
+    font-size: 34px;
+    font-weight: bold;
+}
+
+.map{
+border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px;
+  margin-right: 350px;
+  margin-left: 350px;
+  margin-top: 30px;
+  
+}
+
+.timg1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-top: 20px;
+}
+
+.timg10{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-top: 10px;
+}
+
+.timg20{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 80px;
+    margin-right: 80px;
+   
+}
+
+#hr {
+    color: black;
+    margin-left: 150px;
+    margin-right: 150px;
+    border: solid;
+}
+
+.timg2 img{
+    border-radius: 30px;
+}
+.head {
+    text-align: center;
+    font-family: cursive;
+    word-spacing: 5px;
+    margin-bottom: 50px;
+}
+
+.timg2{
+    width: 400px;
+    height: 400px;
+    border-radius: 100px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.timg3{
+    width: 400px;
+    height: 400px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.timg4{
+    width: 400px;
+    height: 400px;
+    text-align: center;
+    font-weight: bold;
+}
+.footer-top {
+    background: #16132c;
+    padding:50px 0 50px;
+}
+.footer-top h4 {
+    font-size: 19px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+.footer-top p {
+    font-size: 13px;
+    line-height: 2;
+}
+
+footer p {
+  margin-bottom:0;
+}
+.footer-logo {
+    display: block;
+    margin-bottom: 32px;
+}
+.address1 li {
+    list-style: none;
+    position: relative;
+    padding: 0px 0 14px 34px;
+    line-height: 26px;
+}
+ul.address1 span {
+    position: absolute;
+    width: 40px;
+    max-width: 40px;
+    left: 0;
+}
+.address1 li a {
+    color: #fff;
+    text-decoration: none;
+}
+ul.address1 i {
+    width: 20px;
+    position: absolute;
+    left: 0px;
+    text-align: center;
+    font-size: 28px;
+    top: 0;
+}
+
+ul.address1 i.fa-envelope {
+    font-size: 18px;
+    top: 4px;
+}
+footer ul.social-icon {
+    float: left;
+}
+footer .social-icon li i:hover {
+    background: #16132c;
+    border-color: #16132c;
+}
+
+.footer-bottom {
+    background: #16132c;
+    padding: 10px 0px;
+}
+.footer-bottom ul li {
+    display: inline;
+    margin-right: 20px;
+    font-size: 18px;
+}
+.footer-bottom ul li a{
+    color:#fff;
+}
+
+.footer-bottom ul {
+    float: right;
+}
+
+.footer-bottom ul li:last-child {
+    margin-right: 0;
+}
+.copyright {
+    font-size: 18px;
+}
+.one{
+ 
+    position:absolute top 50% left 50%;
+    align-content: center;
+    align-items: center;
+}
+
+
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    background-color: #f3f17d;
+    color: #090000ea;
+    padding: 10px 0;  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.marquee {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 20s reverse infinite;
+    padding-left: 100%;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+/* Carousel image height and object fit */
+.carousel-item img {
+  height: 400px;
+  object-fit: cover;
+}
+
+/* Navbar background and text color */
+.navbar {
+  background-color: #291303; /* Brown color for navbar background */
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link {
+  color: #FFD700; /* Gold color */
+}
+
+.navbar .nav-link.active {
+  font-weight: bold;
+}
+
+/* Center navbar links */
+.navbar .navbar-nav {
+  flex-direction: row;
+  justify-content: center;
+}
+
+/* Navbar logo */
+.navbar .navbar-logo {
+  width: 50px; /* Adjust size as needed */
+  margin-right: 10px;
+}
+
+/* Footer styles */
+.footer {
+  padding: 20px 0;
+  background-color: #291303; /* Brown color for footer background */
+  color: white;
+}
+
+.footer a {
+  color: #FFD700; /* Gold color for links */
+}
+
+.footer h2 {
+  color: white;
+}
+
+/* Center footer logo */
+.footer-logo {
+  width: 100px; /* Adjust size as needed */
+  margin-bottom: 10px;
+}
+
+/* Center footer content */
+.footer .container {
+  text-align: center;
+}
+/* Submit button styles */
+.btn-primary {
+  background-color: #291303; /* Brown color matching footer background */
+  color: #FFD700; /* Gold color for text */
+  border: none; /* Remove border */
+}
+
+.btn-primary:hover {
+  background-color: #FFD700; /* Gold color on hover */
+  color: #291303; /* Brown color for text on hover */
+}

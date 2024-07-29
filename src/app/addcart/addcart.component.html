@@ -1,0 +1,31 @@
+<div class="container">
+  <h1>Cart</h1>
+  <div class="row" *ngIf="cartItems.length > 0; else emptyCart">
+    <div class="col-md-4" *ngFor="let item of cartItems; let i = index">
+      <div class="card mb-4">
+        <div class="card-body">
+          <h5 class="card-title">{{item.name}}</h5>
+          <p class="card-text">{{item.description}}</p>
+          <p class="card-text">Unit Price: {{item.price | currency :'INR'}}</p>
+
+          <!-- Quantity Controls -->
+          <div class="quantity-controls mb-2">
+            <button (click)="decreaseQuantity(i)" class="btn btn-outline-secondary">-</button>
+            <span class="quantity">{{item.quantity}}</span>
+            <button (click)="increaseQuantity(i)" class="btn btn-outline-secondary">+</button>
+          </div>
+
+          <p class="card-text">Total: {{item.price * item.quantity | currency :'INR'}}</p>
+          <button (click)="removeItem(i)" class="btn btn-danger">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="cartItems.length > 0" class="mt-4">
+    <h3>Total Bill Amount: {{totalBill | currency :'INR'}}</h3>
+    <button routerLink="/payment" class="btn btn-success">Proceed to Pay</button>
+  </div>
+  <ng-template #emptyCart>
+    <p>Your cart is empty.</p>
+  </ng-template>
+</div>

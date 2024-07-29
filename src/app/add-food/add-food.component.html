@@ -1,0 +1,34 @@
+<div class="container mt-4">
+  <h1>Menu</h1>
+
+  <!-- Form to add new dish -->
+  <form (submit)="addDish()">
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="Dish Name" name="dishName" [(ngModel)]="newDishName" required>
+    </div>
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="Dish Type" name="dishType" [(ngModel)]="newDishType" required>
+    </div>
+    <div class="form-group">
+      <input type="number" class="form-control" placeholder="Dish Price" name="dishPrice" [(ngModel)]="newDishPrice" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Add Dish</button>
+  </form>
+
+  <hr>
+
+  <!-- Display menu items -->
+  <div class="row">
+    <div class="col-md-4" *ngFor="let item of menuItems">
+      <div class="card mb-4">
+        <img class="card-img-top" [src]="item.image" alt="{{item.name}}">
+        <div class="card-body">
+          <h5 class="card-title">{{item.name}}</h5>
+          <p class="card-text">{{item.description}}</p>
+          <p class="card-text">{{item.price | currency :'INR'}}</p>
+          <button (click)="orderItem(item)" class="btn btn-primary">Order This</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

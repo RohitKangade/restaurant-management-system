@@ -1,0 +1,32 @@
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    color: #333;
+}
+
+.card-text {
+    color: #555;
+}
+
+.container {
+    max-width: 1200px;
+}
+
+.mt-5 {
+    margin-top: 3rem !important;
+}

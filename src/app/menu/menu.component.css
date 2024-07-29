@@ -1,0 +1,139 @@
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+  }
+
+  
+.timg1{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 80px;
+  margin-right: 80px;
+  margin-top: 20px;
+}
+
+.timg10{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 80px;
+  margin-right: 80px;
+  margin-top: 10px;
+}
+
+.timg20{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 80px;
+  margin-right: 80px;
+ 
+}
+
+#hr {
+  color: black;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.timg2 img{
+  border-radius: 30px;
+}
+.head {
+  text-align: center;
+  font-family: cursive;
+  word-spacing: 5px;
+  
+}
+
+.timg2{
+  width: 400px;
+  height: 400px;
+  border-radius: 100px;
+  text-align: center;
+  font-weight: bold;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+.menu-card {
+  max-width: 800px;
+  margin: auto;
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.menu-header {
+  text-align: center;
+  padding: 10px 0;
+  border-bottom: 2px solid #eee;
+}
+.menu-section {
+  padding: 20px 0;
+}
+.menu-section h2 {
+  color: #333;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
+}
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  font-family: Arial, sans-serif;
+  border-bottom: 1px solid #eee;
+}
+.menu-item:last-child {
+  border-bottom: none;
+}
+.menu-item h3 {
+  margin: 0;
+  color: #555;
+}
+.menu-item span {
+  color: #777;
+}
+.section-container {
+  display: flex;
+  justify-content: space-between;
+}
+.section {
+  width: 48%;
+}
+
+.timg3{
+  width: 400px;
+  height: 400px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.timg4{
+  width: 400px;
+  height: 400px;
+  text-align: center;
+  font-weight: bold;
+}
+  
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+}
+
+.quantity-controls .btn {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+}
+
+.quantity-controls .quantity {
+  width: 40px;
+  text-align: center;
+  line-height: 40px;
+}

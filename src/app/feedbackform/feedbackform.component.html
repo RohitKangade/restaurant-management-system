@@ -1,0 +1,36 @@
+
+<body>
+    <div class="container mt-4 feedback-container">
+        <button type="button" class="btn btn-primary" (click)="openModal()">
+            Feedback
+        </button>
+
+        <!-- Feedback Form Modal -->
+        <div class="modal" [ngClass]="{'show': isModalOpen}" id="feedbackModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="feedbackModalLabel">Feedback Form</h5>
+                        <button type="button" class="close" (click)="closeModal()" aria-label="Close" id="feedbackModalCloseButton">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form (ngSubmit)="addfeedback()">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Name" name="name" [(ngModel)]="cName" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="City" name="city" [(ngModel)]="ccity" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Opinion" name="opinion" [(ngModel)]="copinion" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Add Feedback</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

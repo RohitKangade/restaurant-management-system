@@ -1,0 +1,183 @@
+<div class="container mt-4">
+  <h1>Menu</h1>
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Search..." [(ngModel)]="searchTerm" (input)="filterMenuItems()">
+  </div>
+  <div class="form-group">
+    <select class="form-control" [(ngModel)]="selectedFilter" (change)="filterMenuItems()">
+      <option value="">All</option>
+      <option value="South Indian">South Indian</option>
+      <option value="North Indian">North Indian</option>
+      <option value="Maharashtrian">Maharashtrian</option>
+    </select>
+  </div>
+  <div class="row">
+    <div class="col-md-4" *ngFor="let item of filteredMenuItems">
+      <div class="card mb-4">
+        <div class="card-body">
+          <h5 class="card-title">{{item.name}}</h5>
+          <img [src]="item.image" class="card-img-top" alt="{{item.name}}">
+          <p class="card-text">{{item.description}}</p>
+          <p class="card-text">{{item.price | currency :'INR'}}</p>
+          
+          <!-- Quantity Controls -->
+          <div class="quantity-controls mb-2">
+            <button (click)="decreaseQuantity(item)" class="btn btn-outline-secondary">-</button>
+            <span class="quantity">{{item.quantity}}</span>
+            <button (click)="increaseQuantity(item)" class="btn btn-outline-secondary">+</button>
+          </div>
+          
+          <button (click)="orderItem(item)" class="btn btn-primary">Order This</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+  <div class="timg1">
+    <div class="timg2">
+      <img src="https://image3.jdomni.in/banner/10042023/62/79/51/89AEF83A6071C93222B5D0251F_1681132266799.jpeg?output-format=webp">Punjabi Thali
+    </div>
+    <div class="timg2">
+      <img src="https://image1.jdomni.in/banner/10042023/B4/97/7C/01398A991A961C95AE92088902_1681132372692.jpg?output-format=webp">Goan Thali
+    </div>
+    <div class="timg2">
+      <img src="https://image2.jdomni.in/banner/10042023/44/EB/ED/1C43992FC6DADE694E752C02FF_1681132497399.jpg?output-format=webp">Maharashtrian Thali
+    </div>
+  </div>
+  
+  <div class="timg1">
+    <div class="timg2">
+      <img src="https://image3.jdomni.in/banner/10042023/AB/96/AA/41A375BB0D35A47685C8D23D59_1681132543092.jpg?output-format=webp">Rajasthani Thali
+    </div>
+    <div class="timg2">
+      <img src="https://image1.jdomni.in/banner/10042023/FE/CB/04/08972CA9DB6410C9D6DC3C93C0_1681132783686.jpg?output-format=webp">Bengali Thali
+    </div>
+    <div class="timg2">
+      <img src="https://image2.jdomni.in/banner/10042023/C5/EB/21/4259D2B20F3AE3040788F91457_1681132950358.jpg?output-format=webp">Gujarati Thali
+    </div>
+  </div>
+  
+  <div class="menu-card">
+    <div class="menu-header">
+      <h1>Food Menu</h1>
+    </div>
+  
+    <div class="section-container">
+      <div class="section">
+        <div class="menu-section">
+          <h2>Veg Starters</h2>
+          <div class="menu-item">
+            <h3>Paneer Tikka</h3>
+            <span>160.00</span>
+            <button (click)="orderItem({name: 'Paneer Tikka', price: 160})" class="btn btn-sm btn-primary">Order This</button>
+          </div>
+          <div class="menu-item">
+            <h3>Seekh Kabab</h3>
+            <span>170.00</span>
+            <button (click)="orderItem({name: 'Seekh Kabab', price: 170})" class="btn btn-sm btn-primary">Order This</button>
+          </div>
+          <div class="menu-item">
+            <h3>Hariyali Kabab</h3>
+            <span>160.00</span>
+            <button (click)="orderItem({name: 'Hariyali Kabab', price: 160})" class="btn btn-sm btn-primary">Order This</button>
+          </div>
+          <div class="menu-item">
+            <h3>Green Salad</h3>
+            <span>80.00</span>
+            <button (click)="orderItem({name: 'Green Salad', price: 80})" class="btn btn-sm btn-primary">Order This</button>
+          </div>
+          <div class="menu-item">
+            <h3>Cheese Pakoda</h3>
+            <span>90.00</span>
+            <button (click)="orderItem({name: 'Cheese Pakoda', price: 90})" class="btn btn-sm btn-primary">Order This</button>
+          </div>
+        </div>
+        <div class="menu-section">
+          <h2>Rice</h2>
+          <div class="menu-item">
+            <h3>Veg Pulav</h3>
+            <span>260.00</span>
+            <button (click)="orderItem({name: 'Veg Pulav', price: 260})" class="btn btn-sm btn-primary">Order This</button>
+          </div>
+          <div class="menu-item">
+            <h3>Paneer Biryani</h3>
+            <span>220.00</span>
+            <button (click)="orderItem({name: 'Paneer Biryani', price: 220})" class="btn btn-sm btn-primary">Order This</button>
+          </div>
+          <div class="menu-item">
+            <h3>Chicken Biryani</h3>
+            <span>380.00</span>
+            <button (click)="orderItem({name: 'Chicken Biryani', price: 380})" class="btn btn-sm btn-primary">Order This</button>
+          </div>
+          <div class="menu-item">
+            <h3>Mutton Biryani</h3>
+            <span>480.00</span>
+            <button (click)="orderItem({name: 'Mutton Biryani', price: 480})" class="btn btn-sm btn-primary">Order This</button>
+          </div>
+        </div>
+      </div>
+  
+      <div class="section">
+        <div class="menu-section">
+          <h2>Main Course</h2>
+          <div class="menu-item">
+            <h3>Paneer Butter Masala</h3>
+            <span>280.00</span>
+            <button (click)="orderItem({name: 'Paneer Butter Masala', price: 280})" class="btn btn-sm btn-primary">Order This</button>
+          </div>
+          <div class="menu-item">
+            <h3>Malai Kofta</h3>
+            <span>220.00</span>
+            <button (click)="orderItem({name: 'Malai Kofta', price: 220})" class="btn btn-sm btn-primary">Order This</button>
+          </div>
+          <div class="menu-item">
+            <h3>Gobi Mutter Masala</h3>
+            <span>180.00</span>
+            <button (click)="orderItem({name: 'Gobi Mutter Masala', price: 180})" class="btn btn-sm btn-primary">Order This</button>
+          </div>
+          <div class="menu-item">
+            <h3>Veg Handi</h3>
+            <span>140.00</span>
+            <button (click)="orderItem({name: 'Veg Handi', price: 140})" class="btn btn-sm btn-primary">Order This</button>
+          </div>
+          <div class="menu-item">
+            <h3>Mashroom Masala</h3>
+            <span>200.00</span>
+            <button (click)="orderItem({name: 'Mashroom Masala', price: 200})" class="btn btn-sm btn-primary">Order This</button>
+          </div>
+          <div class="menu-item">
+            <h3>Mutton Fry</h3>
+            <span>360.00</span>
+            <button (click)="orderItem({name: 'Mutton Fry', price: 360})" class="btn btn-sm btn-primary">Order This</button>
+          </div>
+          <div class="menu-item">
+            <h3>Chicken Masala</h3>
+            <span>270.00</span>
+            <button (click)="orderItem({name: 'Chicken Masala', price: 270})" class="btn btn-sm btn-primary">Order This</button>
+          </div>
+        </div>
+        <div class="menu-section">
+          <h2>Roti</h2>
+          <div class="menu-item">
+            <h3>Butter Roti</h3>
+            <span>40.00</span>
+            <button (click)="orderItem({name: 'Butter Roti', price: 40})" class="btn btn-sm btn-primary">Order This</button>
+          </div>
+          <div class="menu-item">
+            <h3>Butter Naan</h3>
+            <span>70.00</span>
+            <button (click)="orderItem({name: 'Butter Naan', price: 70})" class="btn btn-sm btn-primary">Order This</button>
+          </div>
+          <div class="menu-item">
+            <h3>Chapati</h3>
+            <span>25.00</span>
+            <button (click)="orderItem({name: 'Chapati', price: 25})" class="btn btn-sm btn-primary">Order This</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

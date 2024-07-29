@@ -1,0 +1,39 @@
+<div class="container mt-4">
+  <h1>Payment</h1>
+  <div class="row" *ngIf="cartItems.length > 0; else emptyCart">
+    <div class="col-md-4" *ngFor="let item of cartItems; let i = index">
+      <div class="card mb-4">
+        <div class="card-body">
+          <h5 class="card-title">{{item.name}}</h5>
+          <p class="card-text">{{item.description}}</p>
+          <p class="card-text">Unit Price: {{item.price | currency :'INR'}}</p>
+          <p class="card-text">Quantity: {{item.quantity}}</p>
+          <p class="card-text">Total: {{item.price * item.quantity | currency :'INR'}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="summary mt-4">
+    <h3>Final Bill</h3>
+    <p>Total Amount: {{ totalAmount | currency :'INR' }}</p>
+    <p>Discount: {{ discount | currency :'INR' }}</p>
+    <p>GST ({{ gstRate * 100 }}%): {{ gstAmount | currency :'INR' }}</p>
+    <p>CGST ({{ cgstRate * 100 }}%): {{ cgstAmount | currency :'INR' }}</p>
+
+    <!-- Optional Service Charge -->
+    <div class="form-check mb-2">
+      <input class="form-check-input" type="checkbox" id="serviceChargeCheck" [(ngModel)]="includeServiceCharge" (change)="updateFinalAmount()">
+      <label class="form-check-label" for="serviceChargeCheck">
+        Include Service Charge ({{ serviceCharge | currency :'INR' }})
+      </label>
+    </div>
+
+    <p><strong>Final Amount: {{ finalAmount | currency :'INR' }}</strong></p>
+    <button (click)="confirmPayment()" class="btn btn-success">Confirm Payment</button>
+  </div>
+
+  <ng-template #emptyCart>
+    <p>Your cart is empty.</p>
+  </ng-template>
+</div>

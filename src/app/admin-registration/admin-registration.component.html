@@ -1,0 +1,51 @@
+<form [formGroup]="regForm" (ngSubmit)="handleSubmit()" class="form-container">
+  <h1>Admin Registration Form</h1>
+
+  <div class="form-group">
+    <label for="fname">First Name*:</label>
+    <input type="text" formControlName="firstName" id="fname" />
+    <div *ngIf="firstName.errors?.required" class="error-message"><b>First Name is required</b></div>
+  </div>
+
+  <div class="form-group">
+    <label for="lname">Last Name*:</label>
+    <input type="text" formControlName="lastName" id="lname" />
+    <div *ngIf="forlastName.errors?.required" class="error-message"><b>Last Name is required</b></div>
+  </div>
+
+  <div class="form-group">
+    <label for="mobno">Mobile Number*:</label>
+    <input type="text" formControlName="mobno" id="mobno" />
+    <div *ngIf="forMob.errors?.pattern" class="error-message"><b>Mobile Number must be numeric and 10 digits long</b></div>
+    <div *ngIf="forMob.errors?.maxlength" class="error-message"><b>Mobile Number cannot exceed 10 digits</b></div>
+    <div *ngIf="forMob.errors?.required" class="error-message"><b>Mobile Number is required</b></div>
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email*:</label>
+    <input type="email" formControlName="email" id="email" />
+    <div *ngIf="forEmail.errors?.email" class="error-message"><b>Invalid email address</b></div>
+    <div *ngIf="forEmail.errors?.required" class="error-message"><b>Email is required</b></div>
+  </div>
+
+  <div class="form-group">
+    <label for="password">Password*:</label>
+    <input type="password" formControlName="password" id="password" />
+    <div *ngIf="forPassword.errors?.required" class="error-message"><b>Password is required</b></div>
+    <div *ngIf="forPassword.errors?.minlength" class="error-message"><b>Password must be at least 8 characters long</b></div>
+  </div>
+
+  <div class="form-group">
+    <label for="conformpassword">Confirm Password*:</label>
+    <input type="password" formControlName="conformpassword" id="conformpassword" />
+    <div *ngIf="forConformpass.errors?.required" class="error-message"><b>Confirm Password is required</b></div>
+    <div *ngIf="forConformpass.errors?.minlength" class="error-message"><b>Confirm Password must be at least 8 characters long</b></div>
+    <div *ngIf="regForm.hasError('passwordMismatch')" class="error-message"><b>Passwords do not match</b></div>
+  </div>
+
+  <div class="form-group">
+    <button type="submit">Register</button>
+    <button type="reset">Reset</button>
+    <button type="button" [routerLink]="['/adminlogin']">Back to Login</button>
+  </div>
+</form>

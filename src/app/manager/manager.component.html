@@ -1,0 +1,29 @@
+<div class="manager-report">
+    <input type="text" placeholder="Search..." [(ngModel)]="searchText" (input)="filterOrders()" />
+  
+    <table>
+      <thead>
+        <tr>
+          <th>Order ID</th>
+          <th>Status</th>
+          <th>Details</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let order of filteredOrders" [ngClass]="{
+          'pending-order': order.status === 'Pending',
+          'cancelled-order': order.status === 'Cancelled',
+          'completed-order': order.status === 'Completed'
+        }">
+          <td>{{ order.id }}</td>
+          <td>{{ order.status }}</td>
+          <td>{{ order.details }}</td>
+          <td>
+            <button *ngIf="order.status === 'Pending'" (click)="markAsDelivered(order.id)">Deliver</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
